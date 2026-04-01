@@ -1,7 +1,7 @@
 import './style/abp-heading.css'
 
 import Hi from './assets/icons/Hi.svg'
-import code from './assets/icons/code.svg'
+import code from './assets/icons/Code.svg'
 
 export function Heading() {
   return (
