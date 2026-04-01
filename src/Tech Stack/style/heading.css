@@ -1,0 +1,25 @@
+.ts-heading {
+  width: 100%; /* Take full width of centered container */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 141px;
+}
+
+.ts-heading p {
+  line-height: 0.8; /* Achieve the tight vertical overlap for the Tech/Stack words */
+  text-align: center;
+  font-family: Geist;
+  font-size: 96px;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: -5.76px;
+  margin: 0px;
+  background: linear-gradient(90deg, #FFF 0%, #626262 90.85%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block; /* Ensure the gradient fits precisely to the text block */
+}
+

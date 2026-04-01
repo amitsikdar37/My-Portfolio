@@ -1,0 +1,53 @@
+.ai-bot-page {
+  width: 100%;
+  height: 1024px;
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.ellipse {
+  width: 864px;
+  height: 864px;
+  border-radius: 864px;
+  background: #B10000;
+  filter: blur(279.29998779296875px);
+  position: absolute;
+}
+
+.abp-home-btn {
+  position: absolute;
+  top: 76px;
+  right: 125px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 8px 16px;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-decoration: none;
+  z-index: 20;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.abp-home-btn:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.abp-home-btn img {
+  width: 10px;
+  height: 11px;
+}
+
+.abp-home-btn span {
+  color: #e6e6e6;
+  font-family: 'Geist', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: normal;
+}

@@ -1,0 +1,84 @@
+.ts-card {
+  width: 150px;
+  height: 174px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 4px 0 #F5F5F5;
+  position: relative;
+}
+
+
+.logo {
+  display: flex;
+  width: 150px;
+  height: 113.265px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 12px;
+  background: #F4F4F4;
+  z-index: 10;
+  position: absolute;
+}
+
+.logo-img {
+  width: 95px;
+  height: 85px;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+
+.ts-meta {
+  width: 150px;
+  height: 139px;
+  border-radius: 12px;
+  background: #FFF;
+  position: absolute;
+  z-index: 5;
+  top: 35px;
+}
+
+.ts-meta-container {
+  margin-top: 80px;
+  margin-bottom: 11px;
+  margin-left: 7px;
+  margin-right: 51px;
+}
+
+.tech-name, .mastery {
+  margin: 0;
+}
+
+.tech-name {
+  color: #000;
+  font-family: Geist;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -1.44px;
+}
+
+.mastery {
+  font-family: Geist;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.96px;
+}
+
+.mastery.beginner {
+  color: #149900;
+}
+
+.mastery.intermediate {
+  color: #1E3EF2;
+}
+
+.mastery.advance {
+  color: #F24E1E;
+}
+
+

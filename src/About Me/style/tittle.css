@@ -1,0 +1,27 @@
+.abm-title p {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #000;
+  font-family: Poppins;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-top: 196px;
+  margin-left: 250px;
+  margin-bottom: 0px;
+  max-width: 1305px;
+  background: linear-gradient(90deg, #FFF 0%, #626262 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.abm-title span {
+  color: #EE3030;
+  -webkit-text-fill-color: #EE3030;
+  font-family: Poppins;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}

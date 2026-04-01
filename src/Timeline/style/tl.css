@@ -1,0 +1,19 @@
+.timeline-page {
+  width: 1596px;
+  height: 1109px;
+  margin-top: -140px;
+  background: linear-gradient(180deg, #0C0C0C 0%, #341616 100%);
+  position: relative;
+  z-index: 10;
+}
+
+.timeline-container {
+  width: 1207px;
+  height: 1055px;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  margin-left: 194px;
+  margin-top: 55px;
+  gap: 100px;
+}

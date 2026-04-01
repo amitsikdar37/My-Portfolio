@@ -1,0 +1,9 @@
+.project-grid-container {
+  width: 1192px;
+  height: fit-content;
+  display: inline-grid;
+  row-gap: 103px;
+  column-gap: 32px;
+  grid-template-rows: repeat(2, fit-content(100%));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}

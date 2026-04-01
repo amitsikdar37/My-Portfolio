@@ -1,0 +1,160 @@
+.form-container {
+  width: 923px;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  align-items: left;
+  gap: 27px;
+  align-self: stretch;
+}
+
+.name-email-container {
+  width: 923px;
+  height: 79px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  align-content: left;
+  gap: 169px;
+  align-self: stretch;
+  flex-wrap: wrap;
+}
+
+.name-container, .email-container {
+  width: 377px;
+  height: 79px;
+}
+
+.label {
+  margin: 0px;
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.14px;
+}
+
+.name-email-cnt-input {
+  width: 377px;
+  height: 53px;
+  border-radius: 8px;
+  background: #5F5F5F;
+  text-align: left;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.16px;
+  border: none;
+  padding-left: 19px;
+  outline: none; /* Cleaner feel on focus */
+}
+
+.name-email-cnt-input::placeholder {
+  color: #CCC; /* High contrast placeholder */
+  opacity: 1; /* Reset default browser transparency */
+}
+
+.budget-container {
+  width: 923px;
+  height: 79px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  align-content: left;
+  align-self: stretch;
+  flex-wrap: wrap;
+}
+
+.input-wrapper {
+  position: relative; /* Anchor for absolute positioning of the arrow/icon */
+  width: 100%;
+}
+
+.budget-input {
+  width: 923px;
+  height: 53px;
+  border-radius: 8px;
+  background: #5F5F5F;
+  text-align: left;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.16px;
+  border: none;
+  padding-left: 19px;
+  outline: none; /* Cleaner feel on focus */
+}
+
+.budget-input::placeholder {
+  color: #CCC; /* High contrast placeholder */
+  opacity: 1; /* Reset default browser transparency */
+}
+
+.dropdown-arrow {
+  position: absolute;
+  right: 0px; /* Precise Figma alignment */
+  top: 50%;
+  transform: translateY(-50%); /* Perfectly center vertically */
+  pointer-events: none; /* Ensure icon doesn't block clicking underneath */
+  z-index: 10; /* Bring icon over the input background */
+}
+
+.mssg-input {
+  width: 923px;
+  height: 132px;
+  border-radius: 8px;
+  background: #5F5F5F;
+  text-align: left;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.16px;
+  border: none;
+  padding-left: 19px;
+  padding-top: 15px; /* Text starts at the top-left */
+  outline: none; /* Cleaner feel on focus */
+  resize: none; /* DISABLE default resize handle to clear the corner */
+  position: relative;
+  z-index: 1; /* Keep input below and behind the icon */
+}
+
+.mssg-input::placeholder {
+  color: #CCC;
+  padding-bottom: 93px;
+  padding-right: 831px;
+}
+
+.message-icon {
+  position: absolute;
+  top: 125px;
+  right: 10px;
+  bottom: 11px;
+  left: 920px;
+  z-index: 2;
+}
+
+.submit-button {
+  width: 945px;
+  height: 53px;
+  border-radius: 8px;
+  background: #EE3030;
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.2px;
+  cursor: pointer;
+}

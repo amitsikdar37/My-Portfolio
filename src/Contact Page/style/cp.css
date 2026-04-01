@@ -1,0 +1,19 @@
+.contact-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1596px;
+  height: 885px;
+  background: #0E0E0E;
+  margin-top: 100px;
+}
+
+.contact-page-container {
+  display: flex;
+  width: 923px;
+  height: 750px;
+  flex-direction: column;
+  justify-content: top;
+  align-items: center;
+  gap: 19px;
+}

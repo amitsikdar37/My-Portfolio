@@ -1,0 +1,134 @@
+.pp-heading {
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Center the heading text */
+  align-items: center;
+  padding: 49px 0 0 0; /* Clear right padding that was offsetting the center */
+  box-sizing: border-box;
+  z-index: 10;
+  position: relative;
+}
+
+.home-link {
+  text-decoration: none;
+  display: block;
+  width: fit-content;
+  position: absolute; /* Position the button independently at the top right */
+  top: 49px;
+  right: 124px;
+}
+
+.Home-Btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  width: 92px;
+  height: 38px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #E6E6E6;
+  font-family: 'Geist', sans-serif;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1), 
+              inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+.Home-Btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-1px);
+}
+
+.Home-Logo {
+  width: 12px;
+  height: 13px;
+}
+
+.pp-heading-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0px; /* Added gap for better vertical spacing */
+  width: 100%; /* Better for responsiveness */
+  max-width: 942px;
+}
+
+.pp-heading-text p {
+  margin: 0px;
+  color: #FFF;
+  font-family: 'Geist', sans-serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -1.92px;  
+}
+
+.pp-heading-text-main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+  max-width: 882px;
+  height: 125px;  
+}
+
+.pp-heading-text-main-line {
+  flex-grow: 1; 
+  max-width: 165px;
+  height: 1px;
+  background-color: #FFF; 
+}
+
+.pp-heading-text-main h1 {
+  margin: 0px;
+  width: 505px;
+  height: 125px;
+  color: #FFF;
+  font-family: 'Geist', sans-serif;
+  font-size: 96px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -5.76px;
+  background: linear-gradient(90deg, #F98989 0%, #BB0505 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  white-space: nowrap; /* Prevent title from breaking lines */
+}
+
+.pp-heading-text-main h1 span {
+  color: #FFFFFF;
+  -webkit-text-fill-color: #FFFFFF;
+}
+
+.pp-description {
+  margin: 0px;
+  width: auto; 
+  height: auto; 
+  font-family: Geist;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -1.92px;
+  background: linear-gradient(90deg, #FFF 0%, #999 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  white-space: nowrap; 
+  text-align: center;
+}

@@ -1,0 +1,100 @@
+.top-section {
+  width: 1596px;
+  height: 113px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 244px;
+}
+
+.left-side,
+.right-side,
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-side {
+  padding-left: 75px;
+  gap: 7px;
+}
+
+.right-side {
+  padding-right: 158px;
+}
+
+.left-side p {
+  color: #FFF;
+  text-align: center;
+  font-family: "Racing Sans One";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.left-side img {
+  width: 24px;
+  height: 24px;
+}
+
+.navbar {
+  justify-content: space-between;
+  background-color: #000000;
+  width: 517px;
+  height: 46px;
+  border-radius: 12px;
+  gap: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-shadow: -1px 4px 3.7px 1px rgba(0, 0, 0, 0.25);
+}
+
+.nav-item {
+  display: flex;
+  width: 105px;
+  height: 29px;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.nav-item button {
+  border: none;
+  background: none;
+  color: #FFF;
+  text-align: center;
+  font-family: Roboto, sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  cursor: pointer;
+}
+
+.contact-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 109px;
+  height: 39px;
+  border-radius: 12px;
+  background-color: #FFF;
+  border: none;
+  cursor: pointer;
+  color: #000;
+  text-align: center;
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.contact-icon {
+  width: 15.509px;
+  height: 19.216px;
+}

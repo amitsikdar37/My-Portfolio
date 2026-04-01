@@ -1,0 +1,109 @@
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-top: 171px;
+  padding-bottom: 216px;
+  padding-right: 167px;
+  padding-left: 57%;
+  align-items: flex-end;
+  box-sizing: border-box;
+}
+
+.my-name p {
+  color: #FFF;
+  text-align: right;
+  font-family: "Poppins", sans-serif;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin: 0;
+}
+
+.my-title {
+  text-align: right;
+}
+
+.my-title p {
+  color: #FFF;
+  text-align: right;
+  font-family: "Poppins", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0;
+}
+
+.btn-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+.btn {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  align-items: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.btn button {
+  color: #000;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  width: 137px;
+  height: 52px;
+  border-radius: 26px;
+  border: none;
+  cursor: pointer;
+}
+
+.view-projects {
+  background: #4FE454;
+}
+
+.youtube {
+  background: #EE3030;
+  color: #FFF;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.youtube img {
+  width: 24px;
+  height: 18px;
+}
+
+.social-btn {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.social-btn button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-btn img {
+  width: 40px;
+  height: 40px;
+}

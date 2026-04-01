@@ -1,0 +1,26 @@
+.heading {
+  display: flex;
+  flex-direction: column;
+  gap: -47px;
+  width: 1207px;
+  height: 203px;
+  justify-content: center;
+  align-items: center;
+}
+
+.heading p {
+  width: 1207px;
+  height: 125px;
+  margin: -20px;
+  text-align: center;
+  font-family: Geist;
+  font-size: 96px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -5.76px;
+  background: linear-gradient(90deg, #FFF 0%, #626262 90.85%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

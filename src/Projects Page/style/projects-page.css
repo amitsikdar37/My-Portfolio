@@ -1,0 +1,29 @@
+.projects-page {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  background-image: 
+    linear-gradient(to top left, #F91B1B 0%, #000 50%),     /* Quadrant: Top Left (starts bottom-right) */
+    linear-gradient(to top right, #F91B1B 0%, #000 50%),    /* Quadrant: Top Right (starts bottom-left) */
+    linear-gradient(to bottom left, #F91B1B 0%, #000 50%),  /* Quadrant: Bottom Left (starts top-right) */
+    linear-gradient(to bottom right, #F91B1B 0%, #000 50%); /* Quadrant: Bottom Right (starts top-left) */
+
+  background-position: 
+    top left, 
+    top right, 
+    bottom left, 
+    bottom right;
+  background-size: 50% 50%;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 100px;
+}
+
+.projects-page::-webkit-scrollbar {
+  display: none;
+}
+

@@ -1,0 +1,32 @@
+.cp-heading-container {
+  width: 772px;
+  height: 304px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: -100px;
+}
+
+.cp-heading-container h1 {
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 128px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1.28px;
+  margin: 0;
+}
+
+.cp-heading-container h2 {
+  color: #9C9C9C;
+  font-family: Poppins;
+  font-size: 128px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -1.28px;
+  margin-top: -80px;
+  margin-bottom: 0px;
+}

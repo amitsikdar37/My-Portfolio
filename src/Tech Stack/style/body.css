@@ -1,0 +1,9 @@
+.body-container {
+  width: 842px;
+  height: 620px;
+  display: inline-grid;
+  row-gap: 49px;
+  column-gap: 23px;
+  grid-template-rows: repeat(3,fit-content(100%));
+  grid-template-columns: repeat(5,fit-content(100%));
+}
