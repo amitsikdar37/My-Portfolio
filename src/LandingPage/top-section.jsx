@@ -10,9 +10,9 @@ import { useGSAP } from "@gsap/react";
 gsap.registerPlugin(useGSAP);
 
 export function Navbar() {
-  const navbar = useRef()
+  const top_section = useRef()
 
-  const { contextSafe } = useGSAP({ scope: navbar })
+  const { contextSafe } = useGSAP({ scope: top_section })
 
   const onEnter = contextSafe((e) => {
     const content = e.currentTarget.querySelector('.nav-btn-content')
@@ -32,6 +32,64 @@ export function Navbar() {
     })
   })
 
+  const onContactEnter = contextSafe((e) => {
+    const filler = e.currentTarget.querySelector('.btn-filler')
+    const textContent = e.currentTarget.querySelector('.btn-text-content')
+    const iconCircle = e.currentTarget.querySelector('.btn-icon-circle')
+    const icon = e.currentTarget.querySelector('.contact-icon')
+
+    gsap.to(filler, {
+      width: '100%',
+      duration: 0.4,
+      ease: "power2.inOut"
+    })
+    gsap.to(textContent, {
+      y: -16,
+      color: '#fff',
+      duration: 0.4,
+      ease: "power2.inOut"
+    })
+    gsap.to(iconCircle, {
+      backgroundColor: '#fff',
+      duration: 0.4,
+      ease: "power2.inOut"
+    })
+    gsap.to(icon, {
+      filter: 'invert(0)',
+      duration: 0.4,
+      ease: "power2.inOut"
+    })
+  })
+
+  const onContactLeave = contextSafe((e) => {
+    const filler = e.currentTarget.querySelector('.btn-filler')
+    const textContent = e.currentTarget.querySelector('.btn-text-content')
+    const iconCircle = e.currentTarget.querySelector('.btn-icon-circle')
+    const icon = e.currentTarget.querySelector('.contact-icon')
+
+    gsap.to(filler, {
+      width: '0%',
+      duration: 0.4,
+      ease: "power2.inOut"
+    })
+    gsap.to(textContent, {
+      y: 0,
+      color: '#000',
+      duration: 0.4,
+      ease: "power2.inOut"
+    })
+    gsap.to(iconCircle, {
+      backgroundColor: '#000',
+      duration: 0.4,
+      ease: "power2.inOut"
+    })
+    gsap.to(icon, {
+      filter: 'invert(1)',
+      duration: 0.4,
+      ease: "power2.inOut"
+    })
+  })
+
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
     if (element) {
@@ -40,12 +98,12 @@ export function Navbar() {
   };
 
   return (
-    <div className="top-section">
+    <div className="top-section" ref={top_section}>
       <div className="left-side">
         <img src={logo} alt="logo" />
         <p>Amit.</p>
       </div>
-      <div className="navbar" ref={navbar}>
+      <div className="navbar">
         <div className="nav-item">
           <button 
           onClick={() => scrollToSection('about')}
@@ -94,9 +152,22 @@ export function Navbar() {
         </div>
       </div>
       <div className="right-side">
-        <button className="contact-btn" onClick={() => scrollToSection('contact')}>
-          Contact
-          <img src={vector} alt="arrow" className="contact-icon" />
+        <button 
+          className="contact-btn" 
+          onClick={() => scrollToSection('contact')}
+          onMouseEnter={onContactEnter}
+          onMouseLeave={onContactLeave}
+        >
+          <div className="btn-filler"></div>
+          <div className="btn-text-window">
+            <div className="btn-text-content">
+              <span>Contact</span>
+              <span>Hire me</span>
+            </div>
+          </div>
+          <div className="btn-icon-circle">
+            <img src={vector} alt="arrow" className="contact-icon" />
+          </div>
         </button>
       </div>
     </div>

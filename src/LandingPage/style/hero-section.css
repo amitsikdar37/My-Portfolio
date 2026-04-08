@@ -40,7 +40,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  gap: 12px;
+  gap: 0px;
 }
 
 .btn {
@@ -88,7 +88,7 @@
 .social-btn {
   display: flex;
   flex-direction: row;
-  gap: 8px;
+  gap: 10px;
   align-items: center;
   justify-content: flex-end;
 }
@@ -100,10 +100,38 @@
   padding: 0;
   display: flex;
   align-items: center;
-  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 30px;
+  overflow: hidden;
+  position: relative;
 }
 
-.social-btn img {
-  width: 40px;
-  height: 40px;
+.social-btn .icon-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 50px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: transparent;
+  flex-shrink: 0;
+  z-index: 1;
+}
+
+.social-btn .icon-wrap img {
+  width: 30px;
+  height: 30px;
+}
+
+.social-btn .label {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #000;
+  white-space: nowrap;
+  opacity: 0;
+  margin-left: 4px;
+  margin-right: 14px;
 }
