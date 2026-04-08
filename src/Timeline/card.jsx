@@ -1,8 +1,8 @@
 import './style/card.css'
 
-export function Card({title1, title2, description1, description2, month, year}) {
+export function Card({title1, title2, description1, description2, month, year, onMouseEnter, onMouseLeave}) {
   return (
-    <div className='card'>
+    <div className='card' onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
       <div className='card-content'>
         <div className='tl-card-left'>
           <div className='tl-card-top'>

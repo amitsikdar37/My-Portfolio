@@ -7,8 +7,6 @@ import "./style/top-section.css"
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 
-gsap.registerPlugin(useGSAP);
-
 export function Navbar() {
   const top_section = useRef()
 

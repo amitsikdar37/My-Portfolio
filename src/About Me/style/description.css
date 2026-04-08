@@ -23,3 +23,10 @@
   margin-top: 0px;
 }
 
+.profile-pic img {
+  border: none;
+  outline: none;
+  border-radius: 40px; /* Adjust to match your frame's internal curve if needed */
+  display: block;
+}
+

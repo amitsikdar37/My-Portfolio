@@ -1,9 +1,43 @@
+import { gsap } from 'gsap'
+import { useGSAP } from '@gsap/react'
+import { useRef } from 'react'
+
 import './style/body.css'
 import { Card } from './card.jsx'
 
+import Now from './assets/icons/Now.svg'
+import Previous from './assets/icons/Previous.svg'
+
+
 export function Body () {
+
+  const containerRef = useRef(null)
+  const { contextSafe } = useGSAP({ scope: containerRef })
+
+  const mouseEnter = contextSafe((e) => {
+    gsap.to(e.currentTarget, {
+      y: '-10px',
+      scale: 1.05,
+      filter: 'drop-shadow(0 0 15px rgba(255, 255, 255, 1))',
+      zIndex: 10,
+      duration: 0.5,
+      ease: 'power2.out'
+    })
+  })
+
+  const mouseLeave = contextSafe((e) => {
+    gsap.to(e.currentTarget, {
+      y: '0px',
+      scale: 1,
+      filter: 'drop-shadow(0 0 0px rgba(255, 255, 255, 0))',
+      zIndex: 1,
+      duration: 0.5,
+      ease: 'power2.out'
+    })
+  })
+
   return (
-    <div className='tl-body-container'>
+    <div className='tl-body-container' ref={containerRef}>
       <div className='tl-body-left'>
         <Card 
           title1='Building'
@@ -12,6 +46,8 @@ export function Body () {
           description2='Contents'
           month='NOW'
           year= {null}
+          onMouseEnter={mouseEnter}
+          onMouseLeave={mouseLeave}
         />
         <Card 
           title1='UI'
@@ -20,6 +56,8 @@ export function Body () {
           description2='Designing'
           month='March'
           year='2026'
+          onMouseEnter={mouseEnter}
+          onMouseLeave={mouseLeave}
         />
         <Card 
           title1='Backend'
@@ -28,6 +66,8 @@ export function Body () {
           description2='Development'
           month='April'
           year='2025'
+          onMouseEnter={mouseEnter}
+          onMouseLeave={mouseLeave}
         />
         <Card 
           title1='Python'
@@ -36,23 +76,25 @@ export function Body () {
           description2='World'
           month='July'
           year='2024'
+          onMouseEnter={mouseEnter}
+          onMouseLeave={mouseLeave}
         />
       </div>
       <div className='tl-body-partition'>
         <div className='partition-line' />
         <div className='circle-container'>
-          <svg xmlns="http://www.w3.org/2000/svg" width="103" height="103" viewBox="0 0 103 103" fill="none">
-            <circle cx="51.5" cy="51.5" r="51.5" fill="#EE3030"/>
-          </svg>
-          <svg xmlns="http://www.w3.org/2000/svg" width="103" height="103" viewBox="0 0 103 103" fill="none">
-            <circle cx="51.5" cy="51.5" r="51.5" fill="#4FE454"/>
-          </svg>
-          <svg xmlns="http://www.w3.org/2000/svg" width="103" height="103" viewBox="0 0 103 103" fill="none">
-            <circle cx="51.5" cy="51.5" r="51.5" fill="#4FE454"/>
-          </svg>
-          <svg xmlns="http://www.w3.org/2000/svg" width="103" height="103" viewBox="0 0 103 103" fill="none">
-            <circle cx="51.5" cy="51.5" r="51.5" fill="#4FE454"/>
-          </svg>
+          <div>
+            <img src={Now} alt="Now" />
+          </div>
+          <div>
+            <img src={Previous} alt="Previous" />
+          </div>
+          <div>
+            <img src={Previous} alt="Previous" />
+          </div>
+          <div>
+            <img src={Previous} alt="Previous" />
+          </div>
         </div>
       </div>
       <div className='tl-body-right'>

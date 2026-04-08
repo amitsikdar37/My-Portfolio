@@ -9,8 +9,6 @@ import github from "./assets/icons/Github.svg"
 import linkedin from "./assets/icons/linkedin.svg"
 import "./style/hero-section.css"
 
-gsap.registerPlugin(useGSAP)
-
 export function HeroSection() {
   const Hero_btn = useRef(null)
 
@@ -20,7 +18,6 @@ export function HeroSection() {
     gsap.to(e.currentTarget, {
       y: -10,
       scale: 1.1,
-      boxShadow: "0 10px 30px rgba(255, 255, 255, 0.5)",
       duration: 0.5,
       ease: "power2.out"
     })
@@ -30,7 +27,6 @@ export function HeroSection() {
     gsap.to(e.currentTarget, {
       y: 0,
       scale: 1,
-      boxShadow: "0 0 0px rgba(255, 255, 255, 0)",
       duration: 0.5,
       ease: "power2.inOut"
     })
