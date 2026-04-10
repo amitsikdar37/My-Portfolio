@@ -7,6 +7,7 @@ import { AbpSearch } from './abp-search';
 import homeIcon from './assets/icons/Home.svg';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
+import { API_BASE_URL } from '../config';
 
 gsap.registerPlugin(useGSAP);
 
@@ -25,7 +26,7 @@ export function AIBotPage() {
     setIsLoading(true);
 
     try {
-      const response = await fetch('http://localhost:5000/api/chat', {
+      const response = await fetch(`${API_BASE_URL}/api/chat`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ message: text })

@@ -3,6 +3,7 @@ import './style/form.css'
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 import { useRef } from 'react'
+import { API_BASE_URL } from '../config'
 
 import DropdownArrow from './assets/icons/DropdownArrow.svg'
 import MessageIcon from './assets/icons/message.svg'
@@ -97,7 +98,7 @@ export function Form () {
     e.preventDefault()
     
     try {
-      const response = await fetch('http://localhost:5000/api/contact', {
+      const response = await fetch(`${API_BASE_URL}/api/contact`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
