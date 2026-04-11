@@ -59,19 +59,22 @@ export function HeroSection() {
       backgroundColor: "#FFFFFF",
       boxShadow: "0 4px 15px rgba(255, 255, 255, 0.3)",
       duration: 0.4,
-      ease: "power2.out"
+      ease: "power2.out",
+      overwrite: true
     });
 
     gsap.to(iconWrap, {
       backgroundColor: "#FFFFFF",
       duration: 0.3,
-      ease: "power2.out"
+      ease: "power2.out",
+      overwrite: true
     });
 
     gsap.to(img, {
       filter: "brightness(0)",
       duration: 0.3,
-      ease: "power2.out"
+      ease: "power2.out",
+      overwrite: true
     });
 
     gsap.to(label, {
@@ -79,7 +82,8 @@ export function HeroSection() {
       x: 0,
       duration: 0.3,
       delay: 0.1,
-      ease: "power2.out"
+      ease: "power2.out",
+      overwrite: true
     });
   });
 
@@ -94,26 +98,30 @@ export function HeroSection() {
       backgroundColor: "transparent",
       boxShadow: "0 0 0px rgba(255, 255, 255, 0)",
       duration: 0.35,
-      ease: "power2.inOut"
+      ease: "power2.inOut",
+      overwrite: true
     });
 
     gsap.to(iconWrap, {
       backgroundColor: "transparent",
       duration: 0.3,
-      ease: "power2.inOut"
+      ease: "power2.inOut",
+      overwrite: true
     });
 
     gsap.to(img, {
       filter: "brightness(1) invert(0)",
       duration: 0.3,
-      ease: "power2.inOut"
+      ease: "power2.inOut",
+      overwrite: true
     });
 
     gsap.to(label, {
       opacity: 0,
       x: -10,
       duration: 0.2,
-      ease: "power2.in"
+      ease: "power2.in",
+      overwrite: true
     });
   });
 
