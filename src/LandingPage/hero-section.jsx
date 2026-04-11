@@ -156,6 +156,7 @@ export function HeroSection() {
             className="X-btn"
             onMouseEnter={onEnterSocial}
             onMouseLeave={onLeaveSocial}
+            onClick={() => window.open("https://x.com/Amit1475571", "_blank")}
           >
             <div className="icon-wrap">
               <img src={X} alt="X" />
@@ -166,6 +167,7 @@ export function HeroSection() {
             className="github-btn"
             onMouseEnter={onEnterSocial}
             onMouseLeave={onLeaveSocial}
+            onClick={() => window.open("https://github.com/amitsikdar37", "_blank")}
           >
             <div className="icon-wrap">
               <img src={github} alt="Github" />
@@ -176,6 +178,7 @@ export function HeroSection() {
             className="linkedin-btn"
             onMouseEnter={onEnterSocial}
             onMouseLeave={onLeaveSocial}
+            onClick={() => window.open("https://www.linkedin.com/in/amit-sikdar-b1b6212a0", "_blank")}
           >
             <div className="icon-wrap">
               <img src={linkedin} alt="Linkedin" />
