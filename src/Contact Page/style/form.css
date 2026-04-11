@@ -157,6 +157,22 @@
   line-height: normal;
   letter-spacing: 0.2px;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button.sending {
+  background: #b92020;
+  cursor: not-allowed;
+  animation: pulseSending 1.2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulseSending {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(0.98); }
 }
 
 .status-message {

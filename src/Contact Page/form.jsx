@@ -5,7 +5,6 @@ import { useGSAP } from '@gsap/react'
 import { useRef } from 'react'
 import { API_BASE_URL } from '../config'
 
-import DropdownArrow from './assets/icons/DropdownArrow.svg'
 import MessageIcon from './assets/icons/message.svg'
 
 gsap.registerPlugin(useGSAP)
@@ -23,6 +22,7 @@ export function Form () {
   })
 
   const [status, setStatus] = useState({ type: null, message: '', key: Date.now() })
+  const [isSending, setIsSending] = useState(false)
 
   const { contextSafe } = useGSAP({ scope: container })
 
@@ -97,6 +97,9 @@ export function Form () {
   const handleSubmit = async (e) => {
     e.preventDefault()
     
+    if (isSending) return;
+    setIsSending(true);
+
     try {
       const response = await fetch(`${API_BASE_URL}/api/contact`, {
         method: 'POST',
@@ -115,6 +118,8 @@ export function Form () {
     } catch (error) {
       console.error('Error:', error)
       setStatus({ type: 'error', message: 'An error occurred. Make sure your backend is running.', key: Date.now() })
+    } finally {
+      setIsSending(false);
     }
   }
 
@@ -186,13 +191,14 @@ export function Form () {
 
       <button 
         type='submit' 
-        className='submit-button'
-        onMouseEnter={mouseEnter}
-        onMouseLeave={mouseLeave}
-        onMouseDown={mouseDown}
-        onMouseUp={mouseUp}
+        className={`submit-button ${isSending ? 'sending' : ''}`}
+        disabled={isSending}
+        onMouseEnter={!isSending ? mouseEnter : undefined}
+        onMouseLeave={!isSending ? mouseLeave : undefined}
+        onMouseDown={!isSending ? mouseDown : undefined}
+        onMouseUp={!isSending ? mouseUp : undefined}
       > 
-        Submit
+        {isSending ? 'Sending...' : 'Submit'}
       </button>
     </form>
   )
