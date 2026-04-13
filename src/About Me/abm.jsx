@@ -18,7 +18,8 @@ export function AboutMe() {
       scrollTrigger:{
         trigger: containerRef.current,
         start: "top 5%", // Pins smoothly explicitly at the very top of view
-        end: "+=1000", // Slightly shorter scroll space so it unpins faster
+        end: "bottom 300px",
+        markers: true, 
         scrub: 1,
         pin: true, // Locks the section in place
       }
