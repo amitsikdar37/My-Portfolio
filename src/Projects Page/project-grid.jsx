@@ -1,11 +1,18 @@
 import './style/project-grid.css';
+import { useRef } from 'react';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ProjectCard } from './project-card';
 import finagentImg from './assets/img/finagent.png';
 import stockpredictorImg from './assets/img/stockpredictor.png';
 import univoteImg from './assets/img/univote.png';
 import whatsappImg from './assets/img/whatsappaibot.png';
 
+gsap.registerPlugin(useGSAP, ScrollTrigger);
+
 export function ProjectGrid() {
+  const gridRef = useRef(null);
   const projectsData = [
     {
       imageSrc: stockpredictorImg,
@@ -69,11 +76,47 @@ export function ProjectGrid() {
     }
   ];
 
-  return(
-    <div className="project-grid-container">
+  useGSAP(() => {
+    // Phase 1: Aggressive Stagger Entrance
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: gridRef.current,
+        start: 'top 80%',
+        once: true 
+      }
+    });
+
+    tl.from('.project-card-float-wrapper', {
+      y: 100,
+      opacity: 0,
+      duration: 0.8,
+      stagger: 0.2, // Cascades smoothly horizontally
+      ease: 'back.out(1.7)'
+    });
+
+    // Phase 2: Beautiful continuous breathing float
+    tl.add(() => {
+      gsap.to('.project-card-float-wrapper', {
+        y: "-=15",
+        yoyo: true,
+        repeat: -1,
+        duration: 2.5,
+        ease: 'sine.inOut',
+        stagger: {
+          amount: 1.5,
+          from: "random" // Naturally desyncs the cards
+        }
+      });
+    });
+  }, { scope: gridRef });
+
+  return (
+    <div className="project-grid-container" ref={gridRef}>
       {projectsData.map((project, index) => (
-        <ProjectCard key={index} {...project} />
+        <div className="project-card-float-wrapper" key={index}>
+          <ProjectCard {...project} />
+        </div>
       ))}
     </div>
   )
-}
+}

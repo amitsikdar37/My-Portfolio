@@ -14,17 +14,17 @@ export function ProjectCard({
   liveLink,
   codeLink
 }) {
-  return(
+  return (
     <div className="project-card-container">
       <div className="project-card-bg"></div>
-      
+
       <div className="project-card-inner">
         <div className="project-card-image-box">
           <img src={imageSrc} alt={title} className="project-card-image" />
         </div>
 
         <div className="project-card-metadata-box">
-          
+
           <div className="project-meta-row">
             <div className="project-topic">
               <span>{topic}</span>
@@ -38,7 +38,7 @@ export function ProjectCard({
           <div className="project-text-box">
             <h3 className="project-title">{title}</h3>
             <p className="project-description">{description}</p>
-            
+
             <div className="project-tech-stack">
               {techStack?.map((tech, idx) => (
                 <div key={idx} className="tech-pill">
@@ -72,4 +72,4 @@ export function ProjectCard({
       </div>
     </div>
   )
-}
+}
