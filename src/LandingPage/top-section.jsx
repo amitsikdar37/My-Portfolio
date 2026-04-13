@@ -6,9 +6,11 @@ import "./style/top-section.css"
 
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
+import { useTransition } from '../TransitionContext';
 
 export function Navbar() {
   const top_section = useRef()
+  const { transitionTo } = useTransition()
 
   const { contextSafe } = useGSAP({ scope: top_section })
 
@@ -114,28 +116,28 @@ export function Navbar() {
           </button>
         </div>
         <div className="nav-item">
-          <Link to="/projects">
-            <button 
+          <button 
             onMouseEnter={onEnter}
-            onMouseLeave={onLeave}>
-              <span className="nav-btn-content">
-                <span>Projects</span>
-                <span>Projects</span>
-              </span>
-            </button>
-          </Link>
+            onMouseLeave={onLeave}
+            onClick={(e) => transitionTo(e, '/projects')}
+          >
+            <span className="nav-btn-content">
+              <span>Projects</span>
+              <span>Projects</span>
+            </span>
+          </button>
         </div>
         <div className= "nav-item">
-          <Link to="/ai-bot">
-            <button 
+          <button 
             onMouseEnter={onEnter}
-            onMouseLeave={onLeave}>
-              <span className="nav-btn-content">
-                <span>AI Bot</span>
-                <span>AI Bot</span>
-              </span>
-            </button>
-          </Link>
+            onMouseLeave={onLeave}
+            onClick={(e) => transitionTo(e, '/ai-bot')}
+          >
+            <span className="nav-btn-content">
+              <span>AI Bot</span>
+              <span>AI Bot</span>
+            </span>
+          </button>
         </div>
         <div className="nav-item">
           <button 
