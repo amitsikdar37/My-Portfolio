@@ -1,0 +1,89 @@
+.dot-matrix-container {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999999;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: all;
+  will-change: transform;
+}
+
+.matrix-scene {
+  position: absolute;
+  right: 5vw;
+  top: 50%;
+  transform: translateY(-50%) scale(1.6);
+  transform-origin: right center; /* Forces growth outwards pushing left, locking the right side tightly to 5vw */
+  display: flex;
+  gap: 24px; /* Space between the digit blocks */
+  align-items: flex-end;
+}
+
+.matrix-arrow {
+  position: absolute;
+  left: 5vw;
+  bottom: 20vh;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 12px; /* Consistent dot spacing */
+}
+
+.dot-matrix-digit {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 12px; /* Space between individual dots */
+}
+
+.matrix-dot {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: transparent;
+  transition: background-color 0.05s ease, box-shadow 0.05s ease; /* Snappy terminal flicker */
+}
+
+.matrix-dot.active {
+  background: #fff;
+  box-shadow: 0px 0px 10px 2px rgba(255, 255, 255, 0.3);
+}
+
+.matrix-marker-top {
+  position: absolute;
+  top: 200px;
+  left: 40px;
+  font-family: 'Geist Mono', monospace;
+  font-size: 14px;
+  color: #fff; /* Monochrome aesthetic explicitly requested */
+  letter-spacing: 2px;
+}
+
+.matrix-marker-bottom {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  font-family: 'Geist Mono', monospace;
+  font-size: 14px;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+  .matrix-dot { width: 12px; height: 12px; }
+  .dot-matrix-digit { gap: 8px; }
+  .matrix-scene { 
+    right: 5vw; 
+    gap: 16px; 
+    transform: translateY(-50%) scale(1.2);
+  }
+  .matrix-arrow {
+    left: 5vw;
+    bottom: 10vh;
+    gap: 8px;
+  }
+}
