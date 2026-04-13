@@ -8,7 +8,34 @@ import { ContactPage } from './Contact Page/cp'
 import { ProjectsPage } from './Projects Page/ProjectsPage'
 import { AIBotPage } from './AIBot/AIBotPage'
 
+import gsap from 'gsap'
+import { useGSAP } from '@gsap/react'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
+gsap.registerPlugin(ScrollTrigger, useGSAP)
+
 function Home() {
+
+  useGSAP(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#tech-stack",
+        start: "300px top",
+        end: "1100px top",
+        scrub: 1,
+        pin: true,
+        pinSpacing: false,
+      }
+    })
+
+    tl.from("#contact", {
+      opacity: 0,
+      y: 100,
+      duration: 1,
+      ease: "power2.out"
+    })
+  })
+
   return (
     <>
       <div id="home"><LandingPage /></div>
