@@ -19,7 +19,6 @@ export function AboutMe() {
         trigger: containerRef.current,
         start: "top 5%", // Pins smoothly explicitly at the very top of view
         end: "bottom 300px",
-        markers: true, 
         scrub: 1,
         pin: true, // Locks the section in place
       }
