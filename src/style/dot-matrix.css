@@ -17,9 +17,11 @@
   right: 5vw;
   top: 50%;
   transform: translateY(-50%) scale(1.6);
-  transform-origin: right center; /* Forces growth outwards pushing left, locking the right side tightly to 5vw */
+  transform-origin: right center;
+  /* Forces growth outwards pushing left, locking the right side tightly to 5vw */
   display: flex;
-  gap: 24px; /* Space between the digit blocks */
+  gap: 24px;
+  /* Space between the digit blocks */
   align-items: flex-end;
 }
 
@@ -30,14 +32,16 @@
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   grid-template-rows: repeat(5, 1fr);
-  gap: 12px; /* Consistent dot spacing */
+  gap: 12px;
+  /* Consistent dot spacing */
 }
 
 .dot-matrix-digit {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(5, 1fr);
-  gap: 12px; /* Space between individual dots */
+  gap: 12px;
+  /* Space between individual dots */
 }
 
 .matrix-dot {
@@ -45,7 +49,8 @@
   height: 18px;
   border-radius: 50%;
   background: transparent;
-  transition: background-color 0.05s ease, box-shadow 0.05s ease; /* Snappy terminal flicker */
+  transition: background-color 0.05s ease, box-shadow 0.05s ease;
+  /* Snappy terminal flicker */
 }
 
 .matrix-dot.active {
@@ -59,7 +64,8 @@
   left: 40px;
   font-family: 'Geist Mono', monospace;
   font-size: 14px;
-  color: #fff; /* Monochrome aesthetic explicitly requested */
+  color: #fff;
+  /* Monochrome aesthetic explicitly requested */
   letter-spacing: 2px;
 }
 
@@ -74,16 +80,26 @@
 }
 
 @media (max-width: 768px) {
-  .matrix-dot { width: 12px; height: 12px; }
-  .dot-matrix-digit { gap: 8px; }
-  .matrix-scene { 
-    right: 5vw; 
-    gap: 16px; 
+  .matrix-dot {
+    width: 12px;
+    height: 12px;
+  }
+
+  .dot-matrix-digit {
+    gap: 8px;
+  }
+
+  .matrix-scene {
+    right: 5vw;
+    gap: 16px;
     transform: translateY(-50%) scale(1.2);
   }
+
   .matrix-arrow {
     left: 5vw;
     bottom: 10vh;
     gap: 8px;
   }
+}
+}
 }
