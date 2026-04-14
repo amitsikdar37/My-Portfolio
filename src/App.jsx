@@ -8,7 +8,7 @@ import { ContactPage } from './Contact Page/cp'
 import { ProjectsPage } from './Projects Page/ProjectsPage'
 import { AIBotPage } from './AIBot/AIBotPage'
 import { TransitionProvider } from './TransitionContext'
-import { DotMatrixPreloader } from './DotMatrixPreloader'
+import { LiquidPreloader } from './LiquidPreloader'
 
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
@@ -52,7 +52,7 @@ function Home() {
 function App() {
   return (
     <>
-      <DotMatrixPreloader />
+      <LiquidPreloader />
       <Router>
         <TransitionProvider>
         <Routes>
