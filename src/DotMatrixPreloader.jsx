@@ -74,7 +74,11 @@ export function DotMatrixPreloader() {
 
         // Exit Timeline
         const exitTl = gsap.timeline({
-          onComplete: () => setLoading(false),
+          onComplete: () => {
+            setLoading(false);
+            window.__PRELOADER_FINISHED = true; // Set a permanent global flag so repeated renders don't wait 
+            window.dispatchEvent(new CustomEvent('preloaderFinished')); // Broadcast the event directly across the tree
+          },
           delay: 0.9 // Let /DEV sit on screen for almost a full second so user can register it
         });
         
