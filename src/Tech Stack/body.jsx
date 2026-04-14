@@ -19,6 +19,7 @@ import Github from './assets/icons/Github.svg'
 import VSCode from './assets/icons/VS Code.svg'
 import Vercel from './assets/icons/Vercel.svg'
 import Jupyter from './assets/icons/Jupyter.svg'
+import Gsap from './assets/icons/Gsap.svg'
 
 import { TsCard } from './ts-cards'
 
@@ -161,6 +162,12 @@ export function Body() {
         logo={Jupyter}
         techName={'Jupyter'}
         mastery={'Beginner'}
+      />
+
+      <TsCard
+        logo={Gsap}
+        techName={'Gsap'}
+        mastery={'Intermediate'}
       />
 
     </div>

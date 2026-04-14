@@ -22,7 +22,7 @@ function Home() {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: "#tech-stack",
-        start: "300px top",
+        start: "600px top",
         end: "1100px top",
         scrub: 1,
         pin: true,
