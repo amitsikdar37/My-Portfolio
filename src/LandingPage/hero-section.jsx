@@ -154,6 +154,7 @@ export function HeroSection() {
             onMouseLeave={onLeaveHero}
             onMouseDown={onPressHero}
             onMouseUp={onReleaseHero}
+            onClick={() => window.open("https://www.youtube.com/@AmitBuilds-y4y", "_blank")}
           >
             Youtube
             <img src={youtube} alt="youtube" />
