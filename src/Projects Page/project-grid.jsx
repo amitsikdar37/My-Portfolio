@@ -56,8 +56,8 @@ export function ProjectGrid() {
         "Transparent, Publicly Verifiable Results",
         "Sybil-Resistant Voter Authentication"
       ],
-      liveLink: "#",
-      codeLink: "#"
+      liveLink: "https://univote-rls4aiekt-amitsikdar37s-projects.vercel.app/",
+      codeLink: "https://github.com/amitsikdar37/univote"
     },
     {
       imageSrc: whatsappImg,
@@ -71,8 +71,8 @@ export function ProjectGrid() {
         "Automated Browser-Based Interaction",
         "Adaptive Conversational Context"
       ],
-      liveLink: "#",
-      codeLink: "#"
+      liveLink: "https://youtu.be/5cdCBXxTDXc?si=CjgjfTaMX1Jwz8M9",
+      codeLink: "https://github.com/amitsikdar37/Omikun_Personal_AI_Assistant"
     }
   ];
 
