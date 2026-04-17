@@ -134,7 +134,7 @@ export function HeroSection() {
       </div>
       <div className="my-title">
         <p>
-          AI Agent Developer | Full Stack Developer |<br /> Grpahic Designer | Youtuber
+          AI Agent Developer | Full Stack Developer |<br /> Graphic Designer | Youtuber
         </p>
       </div>
       <div className="btn-container" ref={Hero_btn}>
