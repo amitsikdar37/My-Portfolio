@@ -5,7 +5,7 @@ import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ProjectCard } from './project-card';
 import finagentImg from './assets/img/finagent.png';
-import stockpredictorImg from './assets/img/stockpredictor.png';
+import cocacolasite from './assets/img/CocaColaSite.png';
 import univoteImg from './assets/img/univote.png';
 import whatsappImg from './assets/img/whatsappaibot.png';
 
@@ -15,19 +15,20 @@ export function ProjectGrid() {
   const gridRef = useRef(null);
   const projectsData = [
     {
-      imageSrc: stockpredictorImg,
-      topic: "AI Agent",
+      imageSrc: cocacolasite,
+      topic: "Website",
       year: "2026",
-      title: "QuantNet: Triple-Threat Stock Predictor",
-      description: "Autonomous n8n agent utilizing a 'Triple Threat' data strategy—Technical, Fundamental, and Sentiment analysis to predict stock price movements and estimate potential daily gains.",
-      techStack: ["Gemini", "N8n", "JavaScript"],
+      title: "Coca Cola Site",
+      description: "A high-fidelity, cinematic web experience featuring a performance-optimized 3D bottle rotation powered by scroll-linked canvas frame sequences, delivering an immersive brand storytelling journey.",
+      techStack: ["React.js", "GSAP", "Framer Motion", "Flow"],
       features: [
-        "Multi-Source Data Ingestion (Technical + Fundamental)",
-        "Real-time News Sentiment Analysis",
-        "Predictive ROI Estimation"
+        "Scroll-Linked 3D Bottle Animation (Canvas-based)",
+        "Smooth GSAP & Framer Motion Orchestration",
+        "Responsive Glassmorphism Design System",
+        "Performance-Optimized Asset Preloading"
       ],
-      liveLink: "#",
-      codeLink: "#"
+      liveLink: "https://coca-coal-site.vercel.app/",
+      codeLink: "https://github.com/amitsikdar37/coca-coal-site"
     },
     {
       imageSrc: finagentImg,
