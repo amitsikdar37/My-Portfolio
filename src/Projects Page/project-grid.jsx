@@ -4,7 +4,7 @@ import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ProjectCard } from './project-card';
-import finagentImg from './assets/img/finagent.png';
+import AtherSiteImg from './assets/img/AtherSite.png';
 import cocacolasite from './assets/img/CocaColaSite.png';
 import univoteImg from './assets/img/univote.png';
 import whatsappImg from './assets/img/whatsappaibot.png';
@@ -31,19 +31,20 @@ export function ProjectGrid() {
       codeLink: "https://github.com/amitsikdar37/coca-coal-site"
     },
     {
-      imageSrc: finagentImg,
-      topic: "AI Agent",
-      year: "2025",
-      title: "FinAgent: Autonomous Expense Intelligence",
-      description: "Autonomous AI assistant extracting financial data from WhatsApp and email to automate expense tracking via real-time Google Sheets synchronization and intelligent analysis.",
-      techStack: ["Gemini", "N8n", "JavaScript"],
+      imageSrc: AtherSiteImg,
+      topic: "Website",
+      year: "2026",
+      title: "Ather 450 Apex Site",
+      description: "A high-fidelity digital showroom for the Ather 450 Apex featuring a performance-optimized 3D vehicle exploration. Powered by a scroll-linked sequence of 1,200+ high-resolution canvas frames, delivering an immersive brand storytelling journey.",
+      techStack: ["React.js", "Tailwind CSS", "GSAP", "Canvas API"],
       features: [
-        "AI-Powered Receipt Parsing (OCR)",
-        "Multi-Channel Ingestion (WhatsApp/Email)",
-        "Autonomous Sheets Synchronization"
+        "Scroll-Linked 3D Canvas Rendering (1,200+ frames)",
+        "Cinematic Preloader & Optimized Asset Loading",
+        "Smooth GSAP Scroll-Triggered Transitions",
+        "Responsive Glassmorphism UI & Dark Theme"
       ],
-      liveLink: "#",
-      codeLink: "#"
+      liveLink: "https://ather-450-apex-site.vercel.app/",
+      codeLink: "https://github.com/amitsikdar37/Ather_450_Apex-site"
     },
     {
       imageSrc: univoteImg,
