@@ -6,14 +6,64 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ProjectCard } from './project-card';
 import AtherSiteImg from './assets/img/AtherSite.png';
 import cocacolasite from './assets/img/CocaColaSite.png';
-import univoteImg from './assets/img/univote.png';
-import whatsappImg from './assets/img/whatsappaibot.png';
+import ashwathamaImg from './assets/img/ashwathama.png';
+import seshnagImg from './assets/img/seshnag.png';
+import trmsite from './assets/img/trmsite.png';
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 export function ProjectGrid() {
   const gridRef = useRef(null);
   const projectsData = [
+    {
+      imageSrc: ashwathamaImg,
+      topic: "Decentralized / CV",
+      year: "2026",
+      title: "Ashwathama: Airspace Threat Shield",
+      description: "A post-radar drone interception system simulating supersonic missile defense. Employs YOLOv8 target detection on live feeds, Lucas-Kanade optical flow camera-motion compensation, and ad-hoc P2P UDP telemetry to dynamically coordinate interceptor drone swarms.",
+      techStack: ["Python", "Flask", "YOLOv8", "OpenCV", "Socket.io", "UDP"],
+      features: [
+        "YOLOv8 Real-Time Supersonic Target Detection",
+        "Lucas-Kanade Optical Flow Motion Tracking",
+        "Autonomous Parallax Camera Auto-Alignment",
+        "Decentralized Swarm Interceptor Allocation"
+      ],
+      liveLink: "https://youtube.com/shorts/ztD5_Y4_XLk?si=QMBM8mkIYOyWMQBr",
+      codeLink: "https://github.com/amitsikdar37/triambaka/tree/main/ashwathama"
+    },
+    {
+      imageSrc: seshnagImg,
+      topic: "Web Application",
+      year: "2026",
+      title: "SeshNag: Smart Evacuation Route Planner",
+      description: "A live civilian tracking and routing dashboard mapped in Patna, Bihar. Integrates Leaflet.js with OSRM Table API to find nearest secure bunkers using actual road networks, dynamically animating users along street geometry and sending emergency Telegram alerts.",
+      techStack: ["Node.js", "Express", "Socket.io", "Leaflet.js", "OSRM API", "Telegram API"],
+      features: [
+        "OSRM Road Matrix Shelter Allocation",
+        "Leaflet.js Dynamic Street Path Navigation",
+        "Staggered API Requests to Prevent IP Rate Limits",
+        "Automated Telegram Evacuation Broadcasting"
+      ],
+      liveLink: "https://youtube.com/shorts/hr_qmTFel-8?si=ztE5__6X4f-FjOp3",
+      codeLink: "https://github.com/amitsikdar37/triambaka/tree/main/shelter%20locator"
+    },
+    {
+      imageSrc: trmsite,
+      topic: "Web Application / NGO",
+      year: "2026",
+      title: "The Revival Mission: NGO Platform",
+      description: "A full-stack platform for a non-governmental organization (NGO) enabling seamless content management, gallery uploads, and community outreach. Features a secure administrative dashboard, MongoDB-backed dynamic asset storage with Base64 encoding, and robust production-ready deployment structures.",
+      techStack: ["React.js", "Node.js", "Express", "MongoDB", "Mongoose", "Vercel", "Render"],
+      features: [
+        "Secure Admin Panel with Asset Upload & Removal",
+        "MongoDB Database for Dynamic Gallery Management",
+        "Base64 Image Encoding for Serverless Compatibility",
+        "Environment-Specific Database Schemas (Dev/Prod)",
+        "Interactive Contact & Integrated Social Media Links"
+      ],
+      liveLink: "https://trm-olive.vercel.app",
+      codeLink: "https://github.com/amitsikdar37/TRM"
+    },
     {
       imageSrc: cocacolasite,
       topic: "Website",
@@ -45,37 +95,7 @@ export function ProjectGrid() {
       ],
       liveLink: "https://ather-450-apex-site.vercel.app/",
       codeLink: "https://github.com/amitsikdar37/Ather_450_Apex-site"
-    },
-    {
-      imageSrc: univoteImg,
-      topic: "Full-Stack",
-      year: "2025",
-      title: "UniVote: Blockchain Based Voting - System",
-      description: "Decentralized voting platform utilizing blockchain technology to ensure transparent, tamper-proof election results through secure smart contracts and an immutable digital ledger system.",
-      techStack: ["Solidity", "Ethereum", "Express", "MongoDB", "Web3.js"],
-      features: [
-        "Immutable Smart Contract Logic",
-        "Transparent, Publicly Verifiable Results",
-        "Sybil-Resistant Voter Authentication"
-      ],
-      liveLink: "https://univote-rls4aiekt-amitsikdar37s-projects.vercel.app/",
-      codeLink: "https://github.com/amitsikdar37/univote"
-    },
-    {
-      imageSrc: whatsappImg,
-      topic: "AI Agent",
-      year: "2025",
-      title: "LlamaLink: Local-LLM WhatsApp AI Bot",
-      description: "Autonomous agent utilizing a locally-hosted Llama model to monitor WhatsApp, parse incoming conversations, and generate intelligent, human-like responses in real-time.",
-      techStack: ["Llama 3", "Selenium", "Express", "NLP", "Automation"],
-      features: [
-        "Privacy-First Local AI Inference",
-        "Automated Browser-Based Interaction",
-        "Adaptive Conversational Context"
-      ],
-      liveLink: "https://youtu.be/5cdCBXxTDXc?si=CjgjfTaMX1Jwz8M9",
-      codeLink: "https://github.com/amitsikdar37/Omikun_Personal_AI_Assistant"
-    }
+    },    
   ];
 
   useGSAP(() => {
